@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="goriofab@gmail.com"
+        android:text="eduardo@gorio.com.br"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"

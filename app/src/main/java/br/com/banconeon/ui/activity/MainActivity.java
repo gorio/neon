@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         API neonAPI = retrofit.create(API.class);
-        Call<ResponseBody> getToken = neonAPI.generateToken("Eduardo Gorio", "eduardo@gorio.com.br");
-//        Call<ResponseBody> getToken = neonAPI.generateToken(txtNome.getText().toString(), txtEmail.getText().toString());
+        Call<ResponseBody> getToken = neonAPI.generateToken(txtNome.getText().toString(), txtEmail.getText().toString());
         getToken.enqueue(new Callback<ResponseBody>() {
 
             @Override
