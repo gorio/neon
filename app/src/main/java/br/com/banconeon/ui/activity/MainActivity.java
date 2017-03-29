@@ -50,9 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        API buscaliAPI = retrofit.create(API.class);
-        Call<ResponseBody> loadFaqs = buscaliAPI.generateToken(txtNome.getText().toString(), txtEmail.getText().toString());
-        loadFaqs.enqueue(new Callback<ResponseBody>() {
+        API neonAPI = retrofit.create(API.class);
+        Call<ResponseBody> getToken = neonAPI.generateToken("Eduardo Gorio", "eduardo@gorio.com.br");
+//        Call<ResponseBody> getToken = neonAPI.generateToken(txtNome.getText().toString(), txtEmail.getText().toString());
+        getToken.enqueue(new Callback<ResponseBody>() {
 
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

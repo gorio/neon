@@ -95,9 +95,9 @@ public class HistoryActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        API buscaliAPI = retrofit.create(API.class);
-        Call<List<TransferHistory>> loadFaqs = buscaliAPI.getTransfers(token);
-        loadFaqs.enqueue(new Callback<List<TransferHistory>>() {
+        API neonAPI = retrofit.create(API.class);
+        Call<List<TransferHistory>> loadHistory = neonAPI.getTransfers(token);
+        loadHistory.enqueue(new Callback<List<TransferHistory>>() {
 
             @Override
             public void onResponse(Call<List<TransferHistory>> call, Response<List<TransferHistory>> response) {

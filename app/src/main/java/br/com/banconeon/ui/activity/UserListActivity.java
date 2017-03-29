@@ -211,9 +211,9 @@ public class UserListActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        API buscaliAPI = retrofit.create(API.class);
-        Call<Boolean> loadFaqs = buscaliAPI.sendMoney(id, token, valor);
-        loadFaqs.enqueue(new Callback<Boolean>() {
+        API neonAPI = retrofit.create(API.class);
+        Call<Boolean> sendMoney = neonAPI.sendMoney(id, token, valor);
+        sendMoney.enqueue(new Callback<Boolean>() {
 
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
