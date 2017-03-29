@@ -1,21 +1,21 @@
 # Teste para desenvolvedores mobile - Banco Neon
 -------------------
 
-![alt text](https://github.com/gorio/neon/Doc/screenflow.png "Screen Flow")
+![alt text](https://github.com/gorio/neon/tree/master/Doc/screenflow.png "Screen Flow")
 
 A primeira tela exibirá  seu  nome, e-mail e dois botões, esses botões levarão para tela de enviar dinheiro e ver histórico de envios. O nome e e-mail é para ser inserido via código e serão campos não editáveis.
 
-![alt text](https://github.com/gorio/neon/Doc/tela1.png "Tela 1")
+![alt text](https://github.com/gorio/neon/tree/master/Doc/tela1.png "Tela 1")
 
 A segunda tela exibirá uma lista com os contatos, você pode criar os contatos de forma estática, o mínimo deverá ser 15. Estes contatos devem conter: Nome, Telefone, Foto, e um ID. Esta lista servirá para você selecionar qual o contato que deseja enviar dinheiro.
 
-![alt text](https://github.com/gorio/neon/Doc/tela2.png "Tela 2")
+![alt text](https://github.com/gorio/neon/tree/master/Doc/tela2.png "Tela 2")
 
-![alt text](https://github.com/gorio/neon/Doc/tela2_detalhes.png "Tela 2 - Detalhes")
+![alt text](https://github.com/gorio/neon/tree/master/Doc/tela2_detalhes.png "Tela 2 - Detalhes")
 
 A terceira tela exibirá uma lista com os contatos que você enviou dinheiro anteriormente, junto ao gráfico do total de transferência feita para cada contato, você terá a informação do dinheiro transferido, mas o total por usuário será um cálculo feito no app.
 
-![alt text](https://github.com/gorio/neon/Doc/tela3.png "Tela 3")
+![alt text](https://github.com/gorio/neon/tree/master/Doc/tela3.png "Tela 3")
 
 O fluxo desejado é:
 
