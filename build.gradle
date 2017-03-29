@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+
+    // CONFIG
+    androidBuildToolsVersion = '25.0.2'
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+
+    // ANDROID
+    supportLibsVersion = '25.3.0'
+    constraintLibsVersion = '1.0.2'
+
+    // ANDROID ANNOTATIONS
+    androidAnnotationsVersion = '4.1.0'
+
+    // TEST
+    spoonVersion = '1.7.0'
+    junitVersion = '4.12'
+    roboletricVersion = '3.1.2'
+
+    androidDependencies = [
+            supportV7       : "com.android.support:appcompat-v7:$supportLibsVersion",
+            recyclerView    : "com.android.support:recyclerview-v7:$supportLibsVersion",
+            percent         : "com.android.support:percent:$supportLibsVersion",
+            design          : "com.android.support:design:$supportLibsVersion",
+            constraint      : "com.android.support.constraint:constraint-layout:$constraintLibsVersion"
+    ]
+
+    androidAnnotationsDependencies = [
+            core: "org.androidannotations:androidannotations:$androidAnnotationsVersion",
+            api : "org.androidannotations:androidannotations-api:$androidAnnotationsVersion"
+    ]
+
+    testDependencies = [
+            spoon     : "com.squareup.spoon:spoon-client:$spoonVersion",
+            junit     : "junit:junit:$junitVersion",
+            roboletric: "org.robolectric:robolectric:$roboletricVersion"
+    ]
+}

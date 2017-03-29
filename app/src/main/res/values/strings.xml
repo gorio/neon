@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Neon</string>
+    <string name="app_name_enviar">ENVIAR DINHEIRO</string>
+    <string name="app_name_historico">HISTÓRICO DE ENVIOS</string>
+
+    <string name="unlock_locked">Mova esta imagem para a direita para transferir o dinheiro</string>
+    <string name="unlock_unlocked">Mova a imagem da direita até esta imagem para transferir o dinheiro</string>
+</resources>
