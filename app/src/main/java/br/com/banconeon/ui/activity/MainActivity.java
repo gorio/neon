@@ -36,12 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     @AfterViews
     void init() {
-        try {
-            if (LocalStorage.getInstance(this).getString("_token") == null || LocalStorage.getInstance(this).getString("_token").isEmpty())
-                getToken();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        getToken();
     }
 
     private void getToken() {
