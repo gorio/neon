@@ -1,13 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
-apply from: "$rootDir/tools/coverage.gradle"
+apply from: '../jacoco.gradle'
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     buildToolsVersion rootProject.ext.androidBuildToolsVersion
-
-
-    testBuildType 'coverageTest'
 
     defaultConfig {
         applicationId "br.com.banconeon"
@@ -20,13 +17,12 @@ android {
     }
 
     buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        coverageTest {
-            signingConfig signingConfigs.debug
-            testCoverageEnabled true
         }
     }
 }
@@ -46,12 +42,9 @@ configurations.all{
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
-
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-
 
     //ANDROID
     compile rootProject.ext.androidDependencies.supportV7
@@ -66,13 +59,9 @@ dependencies {
 
     // Instrumentation tests -------------------------------------------
 
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
-        exclude group: 'com.android.support'
-    }
-
     androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
 
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
         exclude group: 'com.android.support', module: 'appcompat'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude module: 'recyclerview-v7'
