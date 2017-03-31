@@ -56,7 +56,6 @@ ext {
     ]
 
     testDependencies = [
-            spoon     : "com.squareup.spoon:spoon-client:$spoonVersion",
             junit     : "junit:junit:$junitVersion",
             roboletric: "org.robolectric:robolectric:$roboletricVersion"
     ]

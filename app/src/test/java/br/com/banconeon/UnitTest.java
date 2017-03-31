@@ -10,8 +10,6 @@ import org.robolectric.util.ActivityController;
 import br.com.banconeon.ui.activity.UserListActivity_;
 import br.com.banconeon.utils.Util;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)

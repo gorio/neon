@@ -6,12 +6,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class TransferHistory extends User{
 
-//    @SerializedName("Id")
-//    @Expose
-//    private String id;
-//    @SerializedName("ClienteId")
-//    @Expose
-//    private String clienteId;
     @SerializedName("Valor")
     @Expose
     private Double valor;
@@ -25,22 +19,6 @@ public class TransferHistory extends User{
     public TransferHistory(String id, String clienteId, String nome, String telefone, String foto) {
         super(id, clienteId, nome, telefone, foto);
     }
-
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-//
-//    public String getClienteId() {
-//        return clienteId;
-//    }
-//
-//    public void setClienteId(String clienteId) {
-//        this.clienteId = clienteId;
-//    }
 
     public Double getValor() {
         return valor;
